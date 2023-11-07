@@ -26,13 +26,10 @@ public class SoftAssertionsTest {
 //     Перейдите в раздел Wiki проекта
         $("#wiki-tab").click();
 
-//     Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions
+//     Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions, Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5
         $("#wiki-pages-filter").setValue("SoftAssertions").pressEnter();
         $("a[href='/selenide/selenide/wiki/SoftAssertions']").click();
         $(".gh-header-title").shouldHave(text("SoftAssertions"));
-
-
-//     Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5*/
         $("#wiki-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})\n" +
                 "class Tests {\n" +
                 "  @Test\n" +
